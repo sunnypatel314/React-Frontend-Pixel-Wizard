@@ -43,7 +43,7 @@ const Signup = () => {
   const handleLoginAfterSigningUp = async () => {
     setIsHandlingSignUp(true);
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/auth/log-in`, {
+      const response = await fetch(`${API_DOMAIN}/api/v1/auth/log-in`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,6 @@ const Signup = () => {
       if (responseData.success && responseData.token) {
         localStorage.setItem("token", responseData.token);
         const decoded = jwtDecode(responseData.token);
-        console.log(decoded);
         setUser(decoded.username);
         navigate("/");
       } else {
@@ -75,20 +74,17 @@ const Signup = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch(
-        `http://localhost:8080/api/v1/auth/sign-up`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: username.trim(),
-            email: email.trim(),
-            password,
-          }),
-        }
-      );
+      const response = await fetch(`${API_DOMAIN}/api/v1/auth/sign-up`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username.trim(),
+          email: email.trim(),
+          password,
+        }),
+      });
       const responseData = await response.json();
       if (responseData.success) {
         setIsLoading(false);

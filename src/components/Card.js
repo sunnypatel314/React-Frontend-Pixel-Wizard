@@ -19,7 +19,7 @@ const Card = ({ id, creator, prompt, photoUrl, createdDate, username }) => {
 
   const deletePost = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/posts/${id}`, {
+      const response = await fetch(`${API_DOMAIN}/api/v1/posts/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# React-Frontend-Pixel-Wizard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React frontend application for interacting with the backend API, allowing users to perform tasks such as authentication, AI image generation, and post management.
 
-## Available Scripts
+Side note: here is the Github repository for the [Go backend](https://github.com/sunnypatel314/Go-Backend-Pixel-Wizard)
 
-In the project directory, you can run:
+## Features
+- User-friendly interface for authentication (sign up, log in)
+- Input prompts for generating AI images
+- Display posts and images
+- Mobile-responsive design
 
-### `npm start`
+## Tech Stack
+- **React**: Frontend JavaScript library
+- **React Router**: For routing and navigation
+- **Tailwind CSS**: For styling the application
+- **Context API**: For user state management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+Before running the application, ensure you have the following installed:
+- Node.js
+- npm or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sunnypatel314/React-Frontend-Pixel-Wizard.git
+2. **Install dependencies:**
 
-### `npm run build`
+   Install the required packages by running:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   # For npm users
+   npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   # For yarn users
+   yarn install
+3. **Set up environment variables:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Create a `.env` file in the root directory and add the following variable:
 
-### `npm run eject`
+   ```bash
+   REACT_APP_API_DOMAIN=your_ackend_api_domain
+4. **Run the application:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Start the React development server with the following command:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   # For npm users
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   # For yarn users
+   yarn start
+5. **Build the application:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   To create a production build, run the following command:
 
-## Learn More
+   ```bash
+   # For npm users
+   npm run build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   # For yarn users
+   yarn build

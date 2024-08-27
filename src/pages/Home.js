@@ -70,7 +70,7 @@ const Home = () => {
       setLoading(true);
       try {
         if (user) {
-          const response = await fetch(`http://localhost:8080/api/v1/posts`, {
+          const response = await fetch(`${API_DOMAIN}/api/v1/posts`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -78,7 +78,6 @@ const Home = () => {
             },
           });
           const responseData = await response.json();
-          console.log(responseData.data);
           if (response.ok) {
             setAllPosts(responseData.data.reverse());
             setStartingList(responseData.data.reverse());

@@ -24,7 +24,7 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/auth/log-in`, {
+      const response = await fetch(`${API_DOMAIN}/api/v1/auth/log-in`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
